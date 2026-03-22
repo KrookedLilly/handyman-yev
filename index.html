@@ -20,13 +20,7 @@
     tailwindcss.config = {
       theme: {
         extend: {
-          colors: {
-            primary: '#B45309',
-            accent: '#1E3A5F',
-            dark: '#292524',
-            light: '#FDF8F0',
-            secondary: '#78716C',
-          },
+          /* Colors use built-in Tailwind classes: amber-700, blue-900, stone-800, amber-50, stone-500 */
           fontFamily: {
             heading: ['"Bitter"', 'serif'],
             body: ['"Source Sans 3"', 'sans-serif'],
@@ -84,42 +78,42 @@
   }
   </script>
 </head>
-<body class="font-body text-dark bg-light pb-16 md:pb-0">
+<body class="font-body text-stone-800 bg-amber-50 pb-16 md:pb-0">
 
   <!-- Navigation -->
-  <nav x-data="{ open: false }" class="bg-dark text-white sticky top-0 z-40">
+  <nav x-data="{ open: false }" class="bg-stone-800 text-white sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#hero" class="font-heading font-bold text-xl text-primary">Handyman Yev</a>
+      <a href="#hero" class="font-heading font-bold text-xl text-amber-700">Handyman Yev</a>
       <!-- Hamburger Button -->
-      <button @click="open = !open" class="md:hidden focus:outline-none focus:ring-2 focus:ring-primary rounded p-1" aria-label="Toggle navigation menu">
+      <button @click="open = !open" class="md:hidden focus:outline-none focus:ring-2 focus:ring-amber-700 rounded p-1" aria-label="Toggle navigation menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           <path x-show="open" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
       <!-- Nav Links -->
-      <div :class="open ? 'block' : 'hidden'" class="md:flex md:items-center md:gap-6 absolute md:static top-full left-0 right-0 bg-dark md:bg-transparent px-4 pb-4 md:p-0">
-        <a @click="open = false" href="#services" class="block py-2 md:py-0 text-gray-300 hover:text-primary transition-colors">Services</a>
-        <a @click="open = false" href="#why-yev" class="block py-2 md:py-0 text-gray-300 hover:text-primary transition-colors">Why Yev</a>
-        <a @click="open = false" href="#testimonials" class="block py-2 md:py-0 text-gray-300 hover:text-primary transition-colors">Reviews</a>
-        <a @click="open = false" href="#contact" class="block py-2 md:py-0 text-gray-300 hover:text-primary transition-colors">Contact</a>
-        <a href="tel:+15092189377" class="block py-2 md:py-0 text-primary font-semibold hover:text-white transition-colors">(509) 218-9377</a>
+      <div :class="open ? 'block' : 'hidden'" class="md:flex md:items-center md:gap-6 absolute md:static top-full left-0 right-0 bg-stone-800 md:bg-transparent px-4 pb-4 md:p-0">
+        <a @click="open = false" href="#services" class="block py-2 md:py-0 text-gray-300 hover:text-amber-700 transition-colors">Services</a>
+        <a @click="open = false" href="#why-yev" class="block py-2 md:py-0 text-gray-300 hover:text-amber-700 transition-colors">Why Yev</a>
+        <a @click="open = false" href="#testimonials" class="block py-2 md:py-0 text-gray-300 hover:text-amber-700 transition-colors">Reviews</a>
+        <a @click="open = false" href="#contact" class="block py-2 md:py-0 text-gray-300 hover:text-amber-700 transition-colors">Contact</a>
+        <a href="tel:+15092189377" class="block py-2 md:py-0 text-amber-700 font-semibold hover:text-white transition-colors">(509) 218-9377</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="bg-accent text-white">
+  <section id="hero" class="bg-blue-900 text-white">
     <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 text-center md:text-left md:flex md:items-center md:gap-12">
       <div class="md:w-1/2">
         <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">Handyman Yev</h1>
-        <p class="text-xl md:text-2xl font-heading text-primary mb-6">Integrity and Follow-Through in Every Job</p>
+        <p class="text-xl md:text-2xl font-heading text-amber-700 mb-6">Integrity and Follow-Through in Every Job</p>
         <p class="text-lg text-gray-200 mb-8 max-w-xl">Spokane's trusted handyman for home repairs, remodeling, and maintenance. From 90-year-old homes to rental properties, Yev gets it done right the first time.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="tel:+15092189377" class="inline-block bg-primary hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
+          <a href="tel:+15092189377" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
             Call (509) 218-9377
           </a>
-          <a href="#services" class="inline-block border-2 border-white hover:bg-white hover:text-accent text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
+          <a href="#services" class="inline-block border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
             View Services
           </a>
         </div>
@@ -137,69 +131,69 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-16 md:py-24 bg-light">
+  <section id="services" class="py-16 md:py-24 bg-amber-50">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">What Yev Can Do For You</h2>
-        <p class="text-secondary text-lg max-w-2xl mx-auto">From small fixes to full remodels, Yev brings years of multi-trade experience to every project. No job is too complex.</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-stone-800 mb-4">What Yev Can Do For You</h2>
+        <p class="text-stone-500 text-lg max-w-2xl mx-auto">From small fixes to full remodels, Yev brings years of multi-trade experience to every project. No job is too complex.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Service Card: Staircase Installation -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-primary">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-amber-700">
+          <div class="w-12 h-12 bg-amber-700/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h4V11H3v10zm6 0h4V7H9v14zm6 0h4V3h-4v18z"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-dark">Staircase Installation</h3>
-          <p class="text-secondary">Custom staircase builds and repairs, including work on older homes with unique structural requirements.</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-stone-800">Staircase Installation</h3>
+          <p class="text-stone-500">Custom staircase builds and repairs, including work on older homes with unique structural requirements.</p>
         </div>
         <!-- Service Card: Home Remodeling -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-primary">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-amber-700">
+          <div class="w-12 h-12 bg-amber-700/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-dark">Home Remodeling</h3>
-          <p class="text-secondary">Kitchen updates, bathroom renovations, and interior transformations that breathe new life into your home.</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-stone-800">Home Remodeling</h3>
+          <p class="text-stone-500">Kitchen updates, bathroom renovations, and interior transformations that breathe new life into your home.</p>
         </div>
         <!-- Service Card: General Repairs -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-primary">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-amber-700">
+          <div class="w-12 h-12 bg-amber-700/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-dark">General Repairs</h3>
-          <p class="text-secondary">Drywall patches, plumbing fixes, electrical troubleshooting, and everything in between. One call covers it all.</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-stone-800">General Repairs</h3>
+          <p class="text-stone-500">Drywall patches, plumbing fixes, electrical troubleshooting, and everything in between. One call covers it all.</p>
         </div>
         <!-- Service Card: Rental Property Maintenance -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-primary">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-amber-700">
+          <div class="w-12 h-12 bg-amber-700/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-dark">Rental Property Maintenance</h3>
-          <p class="text-secondary">Reliable, ongoing maintenance for landlords and property managers. Keep your units in top shape between tenants.</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-stone-800">Rental Property Maintenance</h3>
+          <p class="text-stone-500">Reliable, ongoing maintenance for landlords and property managers. Keep your units in top shape between tenants.</p>
         </div>
         <!-- Service Card: Multi-Trade Work on Older Homes -->
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-primary">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow border-t-4 border-amber-700">
+          <div class="w-12 h-12 bg-amber-700/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-dark">Older Home Specialist</h3>
-          <p class="text-secondary">Complex multi-trade work on homes 90+ years old. Yev understands the quirks and challenges that come with historic properties.</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-stone-800">Older Home Specialist</h3>
+          <p class="text-stone-500">Complex multi-trade work on homes 90+ years old. Yev understands the quirks and challenges that come with historic properties.</p>
         </div>
         <!-- CTA Card -->
-        <div class="bg-primary rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center text-white">
+        <div class="bg-amber-700 rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center text-white">
           <h3 class="font-heading font-bold text-xl mb-3">Not Sure What You Need?</h3>
           <p class="mb-4 text-amber-100">Call Yev and describe the problem. He will figure it out.</p>
-          <a href="tel:+15092189377" class="inline-block bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-amber-50 transition-colors">
+          <a href="tel:+15092189377" class="inline-block bg-white text-amber-700 font-bold py-3 px-6 rounded-lg hover:bg-amber-50 transition-colors">
             (509) 218-9377
           </a>
         </div>
@@ -211,93 +205,93 @@
   <section id="why-yev" class="py-16 md:py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">Why Hire Yev</h2>
-        <p class="text-secondary text-lg max-w-2xl mx-auto">When you hire Yev, you get a skilled craftsman who treats your home like his own.</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-stone-800 mb-4">Why Hire Yev</h2>
+        <p class="text-stone-500 text-lg max-w-2xl mx-auto">When you hire Yev, you get a skilled craftsman who treats your home like his own.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Card 1 -->
         <div class="text-center p-6">
-          <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-lg mb-2 text-dark">Older Home Expert</h3>
-          <p class="text-secondary text-sm">Specializes in complex repairs on homes 90+ years old. He understands the unique challenges of historic Spokane properties.</p>
+          <h3 class="font-heading font-bold text-lg mb-2 text-stone-800">Older Home Expert</h3>
+          <p class="text-stone-500 text-sm">Specializes in complex repairs on homes 90+ years old. He understands the unique challenges of historic Spokane properties.</p>
         </div>
         <!-- Card 2 -->
         <div class="text-center p-6">
-          <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-lg mb-2 text-dark">Fast Response</h3>
-          <p class="text-secondary text-sm">Clients regularly report Yev showing up within hours of the first call. When something breaks, you need it fixed now.</p>
+          <h3 class="font-heading font-bold text-lg mb-2 text-stone-800">Fast Response</h3>
+          <p class="text-stone-500 text-sm">Clients regularly report Yev showing up within hours of the first call. When something breaks, you need it fixed now.</p>
         </div>
         <!-- Card 3 -->
         <div class="text-center p-6">
-          <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-lg mb-2 text-dark">Honest Pricing</h3>
-          <p class="text-secondary text-sm">No hidden fees, no surprise charges. Yev gives you a straight answer and a fair price, every time.</p>
+          <h3 class="font-heading font-bold text-lg mb-2 text-stone-800">Honest Pricing</h3>
+          <p class="text-stone-500 text-sm">No hidden fees, no surprise charges. Yev gives you a straight answer and a fair price, every time.</p>
         </div>
         <!-- Card 4 -->
         <div class="text-center p-6">
-          <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-lg mb-2 text-dark">Rental Property Pro</h3>
-          <p class="text-secondary text-sm">Trusted by landlords and property managers for reliable, repeat maintenance across multiple units.</p>
+          <h3 class="font-heading font-bold text-lg mb-2 text-stone-800">Rental Property Pro</h3>
+          <p class="text-stone-500 text-sm">Trusted by landlords and property managers for reliable, repeat maintenance across multiple units.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="py-16 md:py-24 bg-light">
+  <section id="testimonials" class="py-16 md:py-24 bg-amber-50">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">What Clients Say</h2>
-        <p class="text-secondary text-lg">5.0 stars across 13 Google reviews</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-stone-800 mb-4">What Clients Say</h2>
+        <p class="text-stone-500 text-lg">5.0 stars across 13 Google reviews</p>
       </div>
       <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Testimonial 1 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-primary">
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-amber-700">
           <div class="flex items-center gap-1 text-yellow-400 mb-3">
             <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           </div>
-          <blockquote class="text-dark text-lg font-heading italic mb-4">"Integrity and follow-through"</blockquote>
-          <p class="text-secondary text-sm">— Satisfied Client</p>
+          <blockquote class="text-stone-800 text-lg font-heading italic mb-4">"Integrity and follow-through"</blockquote>
+          <p class="text-stone-500 text-sm">— Satisfied Client</p>
         </div>
         <!-- Testimonial 2 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-primary">
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-amber-700">
           <div class="flex items-center gap-1 text-yellow-400 mb-3">
             <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           </div>
-          <blockquote class="text-dark text-lg font-heading italic mb-4">"He will figure it out"</blockquote>
-          <p class="text-secondary text-sm">— Satisfied Client</p>
+          <blockquote class="text-stone-800 text-lg font-heading italic mb-4">"He will figure it out"</blockquote>
+          <p class="text-stone-500 text-sm">— Satisfied Client</p>
         </div>
         <!-- Testimonial 3 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-primary">
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-amber-700">
           <div class="flex items-center gap-1 text-yellow-400 mb-3">
             <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           </div>
-          <blockquote class="text-dark text-lg font-heading italic mb-4">"Professional and most importantly honest"</blockquote>
-          <p class="text-secondary text-sm">— Satisfied Client</p>
+          <blockquote class="text-stone-800 text-lg font-heading italic mb-4">"Professional and most importantly honest"</blockquote>
+          <p class="text-stone-500 text-sm">— Satisfied Client</p>
         </div>
         <!-- Testimonial 4 -->
-        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-primary">
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-amber-700">
           <div class="flex items-center gap-1 text-yellow-400 mb-3">
             <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           </div>
-          <blockquote class="text-dark text-lg font-heading italic mb-4">"Within a few hours, he was at my house"</blockquote>
-          <p class="text-secondary text-sm">— Satisfied Client</p>
+          <blockquote class="text-stone-800 text-lg font-heading italic mb-4">"Within a few hours, he was at my house"</blockquote>
+          <p class="text-stone-500 text-sm">— Satisfied Client</p>
         </div>
       </div>
     </div>
@@ -307,22 +301,22 @@
   <section id="contact" class="py-16 md:py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">Get In Touch</h2>
-        <p class="text-secondary text-lg">Ready to get your project started? Give Yev a call.</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-stone-800 mb-4">Get In Touch</h2>
+        <p class="text-stone-500 text-lg">Ready to get your project started? Give Yev a call.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Contact Info -->
         <div>
           <div class="mb-8">
-            <h3 class="font-heading font-bold text-xl text-dark mb-4">Contact</h3>
-            <a href="tel:+15092189377" class="inline-flex items-center gap-3 text-primary text-2xl font-bold hover:text-amber-700 transition-colors mb-4">
+            <h3 class="font-heading font-bold text-xl text-stone-800 mb-4">Contact</h3>
+            <a href="tel:+15092189377" class="inline-flex items-center gap-3 text-amber-700 text-2xl font-bold hover:text-amber-700 transition-colors mb-4">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
               </svg>
               (509) 218-9377
             </a>
-            <p class="text-secondary flex items-start gap-3">
-              <svg class="w-5 h-5 mt-0.5 shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <p class="text-stone-500 flex items-start gap-3">
+              <svg class="w-5 h-5 mt-0.5 shrink-0 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
@@ -330,22 +324,22 @@
             </p>
           </div>
           <div>
-            <h3 class="font-heading font-bold text-xl text-dark mb-4">Hours</h3>
-            <div class="space-y-2 text-secondary">
+            <h3 class="font-heading font-bold text-xl text-stone-800 mb-4">Hours</h3>
+            <div class="space-y-2 text-stone-500">
               <div class="flex justify-between max-w-xs">
-                <span class="font-semibold text-dark">Monday</span>
+                <span class="font-semibold text-stone-800">Monday</span>
                 <span>24 Hours</span>
               </div>
               <div class="flex justify-between max-w-xs">
-                <span class="font-semibold text-dark">Tuesday – Friday</span>
+                <span class="font-semibold text-stone-800">Tuesday – Friday</span>
                 <span>6:00 AM – 6:00 PM</span>
               </div>
               <div class="flex justify-between max-w-xs">
-                <span class="font-semibold text-dark">Saturday</span>
+                <span class="font-semibold text-stone-800">Saturday</span>
                 <span>7:00 AM – 5:00 PM</span>
               </div>
               <div class="flex justify-between max-w-xs">
-                <span class="font-semibold text-dark">Sunday</span>
+                <span class="font-semibold text-stone-800">Sunday</span>
                 <span class="text-red-600">Closed</span>
               </div>
             </div>
@@ -370,12 +364,12 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-gray-400 py-10">
+  <footer class="bg-stone-800 text-gray-400 py-10">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
           <p class="font-heading font-bold text-xl text-white mb-1">Handyman Yev</p>
-          <a href="tel:+15092189377" class="text-primary hover:text-amber-400 transition-colors font-semibold">(509) 218-9377</a>
+          <a href="tel:+15092189377" class="text-amber-700 hover:text-amber-400 transition-colors font-semibold">(509) 218-9377</a>
           <p class="text-sm mt-1">4115 E 36th Ave, Spokane, WA 99223</p>
         </div>
         <nav class="flex flex-wrap gap-4 text-sm">
@@ -393,7 +387,7 @@
   </footer>
 
   <!-- Sticky Click-to-Call Bar (Mobile Only) -->
-  <a href="tel:+15092189377" class="fixed bottom-0 inset-x-0 bg-primary text-white text-center py-4 text-lg font-bold md:hidden z-50 hover:bg-amber-700 transition-colors">
+  <a href="tel:+15092189377" class="fixed bottom-0 inset-x-0 bg-amber-700 text-white text-center py-4 text-lg font-bold md:hidden z-50 hover:bg-amber-700 transition-colors">
     Call Now &mdash; (509) 218-9377
   </a>
 
